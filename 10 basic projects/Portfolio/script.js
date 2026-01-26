@@ -2,7 +2,6 @@ window.onload = function() { // sự kiện sảy ra khi toàn bộ trang (html+
     alert("Quỳ xuống đi. Mệnh lệnh của tôi là tuyệt đối!"); // hiện thị thông báo
 };
 
-<script src="script.js"></script> // liên kết file script.js vào file html
 const menuLinks = document.querySelectorAll("nav ul li a"); // chọn tất cả các thẻ a trong menu
 menuLinks.forEach(link => { // forEach: duyệt qua từng link
     link.addEventListener("click", function() { // gắn sự kiện click cho từng link
