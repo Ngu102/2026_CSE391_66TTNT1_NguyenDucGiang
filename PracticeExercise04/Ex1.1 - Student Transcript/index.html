@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Transcript</title> 
+</head>
+<body>
+    <form onsubmit="check(event)" novalidate>
+        <label for="hoten">Họ tên:</label> 
+        <input type="text" id="hoten" name="hoten" placeholder=""><br><br>
+        <label for="diem">Điểm(0-10):</label>
+        <input type="number" id="diem" name="diem" min = 0 max = 10 placeholder=""><br><br>
+        <button type="submit">Thêm</button> <br><br>
+    </form>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+        <tr>
+            <th>STT</th>
+            <th>Họ tên</th>
+            <th>Điểm</th>
+            <th>Xếp loại</th>
+            <th>Thao tác</th>
+        </tr>
+        </thead>
+        <tbody id="addStudent"></tbody>
+
+    </table>
+    <p>Tổng Sinh Viên: <span id="totalStudents">0</span></p> 
+    <p>Điểm Trung Bình: <span id="totalPoints">0</span></p>
+   <script src="main.js"></script>
+</body>
+</html>
