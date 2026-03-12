@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style>
+    .error-msg {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .input-error {
+        border: 1px solid red;
+    }
+    </style>
+</head>
+<body>
+    <div id="form-section">
+        <h2>Sign Up</h2>
+        <form id="signup-form" novalidate>
+            
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname">
+                <small class="error-msg"></small>
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <small class="error-msg"></small>
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+                <small class="error-msg"></small>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <small class="error-msg"></small>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password">
+                <small class="error-msg"></small>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Gender:</label>
+                <span>
+                    <input type="radio" id="gender_male" name="gender" value="male"> Male
+                    <input type="radio" id="gender_female" name="gender" value="female"> Female
+                    <input type="radio" id="gender_other" name="gender" value="other"> Other
+                </span>
+                <small class="error-msg"></small>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="terms" name="terms">
+                    I agree to the terms and conditions
+                </label>
+                <small class="error-msg"></small>
+            </div>
+            <br>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <div id="success-message" style="display: none;">
+        <h2>Registration Successful!</h2>
+        <p>Welcome, <span id="display-name"></span>!</p>
+        <p>Thank you for signing up.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
