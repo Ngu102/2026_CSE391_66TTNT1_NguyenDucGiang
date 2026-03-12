@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <style>
+
+        .error-msg { color: #d9534f; font-size: 0.9em; min-height: 1.2em; display: block; margin-top: 4px; }
+        .text-red { color: red !important; font-weight: bold; }
+
+    </style>
+</head>
+<body>
+
+    <div id="form-section" class="form-section">
+        <h2>Order Form</h2>
+        <form id="order-form" novalidate>
+            <div class="form-group">
+                <label for="product">Product Name:</label>
+                <select id="product" name="product">
+                    <option value="laptop">Laptop</option>
+                    <option value="phone">Phone</option>
+                    <option value="tablet">Tablet</option>
+                </select>
+                <small class="error-msg" id="err-product"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" placeholder="1-99">
+                <small class="error-msg" id="err-quantity"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="deliveryDate">Delivery Date:</label>
+                <input type="date" id="deliveryDate">
+                <small class="error-msg" id="err-date"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" rows="3" placeholder=""></textarea>
+                <small class="error-msg" id="err-address"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="note">Note: <span id="char-count" style="font-weight: normal; color: #666;">(0/200)</span></label>
+                <input type="text" id="note" placeholder="Optional note">
+                <small class="error-msg" id="err-note"></small>
+            </div>
+
+            <div class="form-group">
+                <label>Payment Method:</label>
+                <div>
+                    <input type="radio" name="paymentMethod" value="COD"> COD
+                    <input type="radio" name="paymentMethod" value="Bank Transfer"> Bank Transfer
+                    <input type="radio" name="paymentMethod" value="E-Wallet"> E-Wallet
+                </div>
+                <small class="error-msg" id="err-payment"></small>
+            </div>
+
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div id="confirm-div" style="display: none;">
+        <h3>Confirm Your Order</h3>
+        <div id="summary-info"></div>
+        <button id="btn-cancel">Cancel</button>
+        <button id="btn-confirm">Confirm</button>
+    </div>
+
+    <h2 id="success-msg" style="display: none;">
+        Order Successful!
+    </h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
